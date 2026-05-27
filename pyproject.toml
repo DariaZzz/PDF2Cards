@@ -1,0 +1,19 @@
+[project]
+name = "pdf2cards"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "datasets>=4.8.5",
+    "dotenv>=0.9.9",
+    "huggingface-hub>=1.15.0",
+    "langgraph>=1.2.2",
+    "mypy>=2.1.0",
+    "ollama>=0.6.1",
+    "openai>=2.38.0",
+    "pdfplumber>=0.11.9",
+    "pillow>=12.2.0",
+    "torch>=2.12.0",
+    "transformers>=5.9.0",
+]
