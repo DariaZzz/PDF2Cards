@@ -34,12 +34,10 @@ class PDFTextExtractor(PDFExtractor):
         lines = [line.strip() for line in text.split('\n') if line.strip()]
         return "\n".join(lines)
 
-    def process_pdf(self, file_path: str) -> List[Dict]:
+    def process_pdf(self, file_path: str) -> list[dict]:
         """
         Основная функция. Принимает путь к PDF, возвращает список словарей.
         Каждый словарь: {'page_num': int, 'text': str}
-
-        Это важно для будущего чанкинга, чтобы знать, откуда взялся текст.
         """
         if not os.path.exists(file_path):
             raise FileNotFoundError(f"Файл {file_path} не найден")
@@ -57,11 +55,10 @@ class PDFTextExtractor(PDFExtractor):
                     text = self.extract_text_from_page(page)
 
                     # 2. Простая эвристика: если текста очень мало, возможно это скан или пустая страница
-                    # Для полноценного OCR тут нужно подключить PaddleOCR/Tesseract
                     if len(text) < 50:
                         logger.warning(
                             f"Страница {i + 1} содержит мало текста ({len(text)} символов). Возможно, требуется OCR.")
-                        # Здесь будет вызов self._run_ocr(page.image) в полной версии
+                        # Здесь будет вызов self._run_ocr(page.image)
 
                     if text:
                         pages_data.append({

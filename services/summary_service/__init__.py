@@ -1,0 +1,1 @@
+from infrastructure.summary_generator import SummaryGenerator

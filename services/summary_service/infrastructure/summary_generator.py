@@ -1,17 +1,18 @@
 import logging
 import torch
 
+from models.model_config import MODEL_NAME
+
 from transformers import (
     AutoTokenizer,
     AutoModelForSeq2SeqLM
 )
 
-from services.summary_service.infrastructure.prompt import SUMMARIZATION_PROMPT
 class SummaryGenerator:
 
     def __init__(
         self,
-        model_name="DariaZzz/t5-summarization"
+        model_name=MODEL_NAME
     ):
 
         logging.basicConfig(level=logging.INFO)
