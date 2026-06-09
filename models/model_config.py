@@ -1,1 +1,1 @@
-MODEL_NAME="DariaZzz/t5-summarization"
+MODEL_NAME="DariaZzz/t5ru-summarization_v3"

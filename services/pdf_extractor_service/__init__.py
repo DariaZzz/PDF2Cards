@@ -1,1 +1,1 @@
-from infrastructure.pdf_extractor import PDFTextExtractor
+from services.pdf_extractor_service.infrastructure.pdf_extractor import PDFTextExtractor

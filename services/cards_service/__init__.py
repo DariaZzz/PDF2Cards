@@ -1,1 +1,1 @@
-from infrastructure.llm.amvera.memory_card_generator import AmveraMemoryCardGenerator
+from services.cards_service.infrastructure.llm.amvera.memory_card_generator import AmveraMemoryCardGenerator

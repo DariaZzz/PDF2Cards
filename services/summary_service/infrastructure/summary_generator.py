@@ -39,7 +39,7 @@ class SummaryGenerator:
     @staticmethod
     def chunk_text(
         text: str,
-        chunk_size: int = 200
+        chunk_size: int = 500
     ) -> list[str]:
 
         words = text.split()

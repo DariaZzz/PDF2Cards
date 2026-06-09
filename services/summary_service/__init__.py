@@ -1,1 +1,1 @@
-from infrastructure.summary_generator import SummaryGenerator
+from services.summary_service.infrastructure.summary_generator import SummaryGenerator
