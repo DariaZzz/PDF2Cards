@@ -86,8 +86,11 @@ class SummaryGenerator:
                 inputs["input_ids"],
                 max_length=150,
                 min_length=40,
-                num_beams=4,
-                early_stopping=True
+                # num_beams=4,
+                do_sample=True,
+                # early_stopping=True,
+                top_p=0.9,
+                temperature=0.7
             )
 
             summary = self.tokenizer.decode(
@@ -108,7 +111,7 @@ class SummaryGenerator:
     def summarize(
         self,
         text: str,
-        chunk_size: int = 200
+        chunk_size: int = 500
     ) -> str:
 
         chunks = self.chunk_text(
